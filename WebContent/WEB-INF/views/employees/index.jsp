@@ -36,9 +36,9 @@
             </tbody>
         </table>
 
-        <div id="pageination">
+        <div id="pagination">
             （全 ${employees_count} 件）<br />
-            <c:forEach var="i" begin="i" end="${((employee_count -1) /15)+1 }" step="1">
+            <c:forEach var="i" begin="1" end="${((employee_count -1) /15)+1 }" step="1">
                 <c:choose>
                     <c:when test="${i == page}">
                         <c:out value="${i}" />&nbsp;
