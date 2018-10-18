@@ -30,7 +30,7 @@ public class LogoutServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 	    request.getSession().removeAttribute("login_employee");
 
-	    request.getSession().setAttribute("flush", "ログインしました。");
+	    request.getSession().setAttribute("flush", "ログアウトしました。");
 	    response.sendRedirect(request.getContextPath() + "/login");
 	}
 
