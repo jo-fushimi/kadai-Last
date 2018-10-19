@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
         request.setAttribute("_token", request.getSession().getId());
         request.setAttribute("hasError", false);
-        if(request.getSession().getAttribute("false") != null){
+        if(request.getSession().getAttribute("flush") != null){
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
             request.getSession().removeAttribute("flush");
         }
@@ -83,7 +83,7 @@ public class LoginServlet extends HttpServlet {
 
 	    if(!check_result){
 	        request.setAttribute("_token", request.getSession().getId());
-	        request.setAttribute("hasErrors", true);
+	        request.setAttribute("hasError", true);
 	        request.setAttribute("code", code);
 
 	        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");

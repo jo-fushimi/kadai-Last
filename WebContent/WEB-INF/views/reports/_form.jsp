@@ -5,7 +5,7 @@
     <div id="flush_error">
         入力エラーがあります。<br />
         <c:forEach var="error" items="${errors}">
-            ・<c:out value="${errors}" /><br />
+            ・<c:out value="${error}" /><br />
         </c:forEach>
 
     </div>
@@ -23,7 +23,7 @@
 <br /><br />
 
 <label for="content">内容</label><br />
-    <textarea name="content" rows="10" cols="50">${report.content}</textarea>
+<textarea name="content" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
 
 <input type = "hidden" name = "_token" value="${_token}" />

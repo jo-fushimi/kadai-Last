@@ -4,7 +4,7 @@
     <div id="flush_error">
         入力エラーがあります。<br />
         <c:forEach var="error" items="${errors}">
-            .<c:out value="${errors}" /><br />
+            ・<c:out value="${error}" /><br />
         </c:forEach>
 
 

@@ -48,7 +48,7 @@ public class Report {
     @Column(name = "report_date", nullable = false)
     private Date report_date;
 
-    @Column(name = "title", nullable = false)
+    @Column(name = "title", length = 255, nullable = false)
     private String title;
 
     @Lob
@@ -57,6 +57,9 @@ public class Report {
 
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
+
+    @Column(name = "updated_at", nullable = false)
+    private Timestamp updated_at;
 
     public Integer getId() {
         return id;
@@ -114,8 +117,6 @@ public class Report {
         this.updated_at = updated_at;
     }
 
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updated_at;
 
 
 

@@ -37,7 +37,7 @@ public class TopPageIndexServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 	    EntityManager em =DBUtil.createEntityManager();
 
-	    Employee login_employee = (Employee)request.getSession().getAttribute("login_emploee");
+	    Employee login_employee = (Employee)request.getSession().getAttribute("login_employee");
 
         int page;
         try{
